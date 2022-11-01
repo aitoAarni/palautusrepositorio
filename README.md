@@ -1,2 +1,2 @@
-# palautusrepositorio
-some MEGA good exercises will be added here for my coursework
+# Ohtu palautus repo s22
+[ohtuvarasto](https://github.com/aitoAarni/ohtuvarasto)
