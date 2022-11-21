@@ -25,6 +25,7 @@ class AppLibrary:
             raise AssertionError(
                 f"Output \"{value}\" is not in {str(outputs)}"
             )
+            
 
     def run_application(self):
         self._app.run()
