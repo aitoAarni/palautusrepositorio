@@ -7,7 +7,7 @@ from viitegeneraattori import Viitegeneraattori
 class TestKauppa(unittest.TestCase):
     def setUp(self):
         pass
-
+  
     def test_kutsutaan_pankki(self):
         pankki_mock = Mock()
         # laitetaan Mock-olio toteuttamaan Viitegeneraattori-luokan metodit
