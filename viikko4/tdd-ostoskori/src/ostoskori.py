@@ -1,6 +1,7 @@
 from tuote import Tuote
 from ostos import Ostos
 
+
 class Ostoskori:
     def __init__(self):
         self.tuotteet = {}
@@ -16,12 +17,17 @@ class Ostoskori:
         # samoin jos korissa on 1 kpl tuotetta "maito" ja 1 kpl tuotetta "juusto", tulee metodin palauttaa 2 
 
     def hinta(self):
-        return 0
+        lukumaara = 0
+        for ostos in self.tuotteet.values():
+            lukumaara += ostos.tuote.hinta()
+        return lukumaara
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
 
     def lisaa_tuote(self, lisattava: Tuote):
-        # lisää tuotteen
-        pass
+        if lisattava.nimi() in self.tuotteet.keys():
+            self.tuotteet[lisattava.nimi()].muuta_lukumaaraa(1)
+        else:
+            self.tuotteet[lisattava.nimi()] = Ostos(lisattava)
 
     def poista_tuote(self, poistettava: Tuote):
         # poistaa tuotteen
